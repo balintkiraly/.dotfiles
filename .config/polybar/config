@@ -1,0 +1,60 @@
+[colors]
+background = #222
+background-alt = #444
+foreground = #dfdfdf
+foreground-alt = #55
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c40
+
+[global/wm]
+margin-top = 3
+margin-bottom = 3
+
+[settings]
+screenchange-reload = true
+
+[bar/top]
+bottom = false
+monitor = LVDS1
+width = 100%
+height = 25
+
+modules-left = i3
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+
+enable-click = true
+
+label-mode = %mode%
+label-mode-padding = 1
+label-mode-foreground = #BBBBBB
+
+label-focused = %name%
+
+label-indicator-padding = 2
+label-indicator-background = #BBBBBB
+label-indicator-underline = #FF0000
+
+label-focused-foreground = #BBBBBB
+label-focused-padding = 1
+label-focused-underline = #FF0000
+
+label-unfocused = %name%
+label-unfocused-foreground = #747474
+label-unfocused-padding = 1
+
+label-visible = %name
+label-visible-foregroud = #888888
+label-visible-padding = 1
+label-visible-background = #BBBBBB
+label-visible-underline = #FF0000
+
+label-urgent = %name%
+label-urgent-padding = 5
+label-urgent-foreground = #FF0000
+
+
