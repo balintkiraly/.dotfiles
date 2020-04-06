@@ -2,3 +2,5 @@
 [[ $- != *i* ]] && return
 
 PS1='[\u@\h \w]\$ '
+
+eval "$(thefuck --alias)"
