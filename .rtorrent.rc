@@ -1,0 +1,13 @@
+download_rate = 0
+upload_rate = 0
+
+directory = ./downloads
+session = ./.rtorrent
+
+schedule2 = watch_directory_foo, 20, 10, "load.start_verbose=~/downloads/*.torrent"
+
+port_range = 30001-39999
+port_random = yes
+
+encryption = allow_incoming,try_outgoing,enable_retry,prefer_plaintext
+
