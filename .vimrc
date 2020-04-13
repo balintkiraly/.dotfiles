@@ -1,6 +1,12 @@
 set nocompatible
 filetype off
 
+let firstRun=0
+if !filereadable($HOME . '/.vim/bundle/Vundle.vim/README.md')
+    exec '!git clone https://github.com/VundleVim/Vundle.vim ~/.vim/bundle/Vundle.vim/'
+    let firstRun=1
+endif
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -13,6 +19,10 @@ Plugin 'preservim/nerdtree'
 
 call vundle#end()
 filetype plugin indent on
+
+if firstRun == 1
+    :PluginInstall
+endif
 
 set laststatus=2
 
