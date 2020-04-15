@@ -78,31 +78,45 @@ set $ws6 "h"
 set $ws7 "j"
 set $ws8 "k"
 set $ws9 "l"
-set $ws10 ";"
+set $ws10 "semicolon"
+
+# switch metaworkspace
+bindsym $mod+mod3+a exec echo "1" > "$HOME/.config/i3/metaws"
+bindsym $mod+mod3+s exec echo "2" > "$HOME/.config/i3/metaws"
+bindsym $mod+mod3+d exec echo "3" > "$HOME/.config/i3/metaws"
+bindsym $mod+mod3+f exec echo "4" > "$HOME/.config/i3/metaws"
+bindsym $mod+mod3+g exec echo "5" > "$HOME/.config/i3/metaws"
+bindsym $mod+mod3+h exec echo "6" > "$HOME/.config/i3/metaws"
+bindsym $mod+mod3+j exec echo "7" > "$HOME/.config/i3/metaws"
+bindsym $mod+mod3+k exec echo "8" > "$HOME/.config/i3/metaws"
+bindsym $mod+mod3+l exec echo "9" > "$HOME/.config/i3/metaws"
+bindsym $mod+mod3+semicolon exec echo "0" > "$HOME/.config/i3/metaws"
+
+set $metaws cat "$HOME/.config/i3/metaws"
 
 # switch to workspace
-bindsym mod3+a workspace $ws1
-bindsym mod3+s workspace $ws2
-bindsym mod3+d workspace $ws3
-bindsym mod3+f workspace $ws4
-bindsym mod3+g workspace $ws5
-bindsym mod3+h workspace $ws6
-bindsym mod3+j workspace $ws7
-bindsym mod3+k workspace $ws8
-bindsym mod3+l workspace $ws9
-bindsym mod3+semicolon workspace $ws10
+bindsym mod3+a exec i3-msg "workspace $($metaws)$ws1"
+bindsym mod3+s exec i3-msg "workspace $($metaws)$ws2"
+bindsym mod3+d exec i3-msg "workspace $($metaws)$ws3"
+bindsym mod3+f exec i3-msg "workspace $($metaws)$ws4"
+bindsym mod3+g exec i3-msg "workspace $($metaws)$ws5"
+bindsym mod3+h exec i3-msg "workspace $($metaws)$ws6"
+bindsym mod3+j exec i3-msg "workspace $($metaws)$ws7"
+bindsym mod3+k exec i3-msg "workspace $($metaws)$ws8"
+bindsym mod3+l exec i3-msg "workspace $($metaws)$ws9"
+bindsym mod3+semicolon exec i3-msg "workspace $($metaws)$ws10"
 
 # move focused container to workspace
-bindsym mod3+Shift+a move container to workspace $ws1
-bindsym mod3+Shift+s move container to workspace $ws2
-bindsym mod3+Shift+d move container to workspace $ws3
-bindsym mod3+Shift+f move container to workspace $ws4
-bindsym mod3+Shift+g move container to workspace $ws5
-bindsym mod3+Shift+h move container to workspace $ws6
-bindsym mod3+Shift+j move container to workspace $ws7
-bindsym mod3+Shift+k move container to workspace $ws8
-bindsym mod3+Shift+l move container to workspace $ws9
-bindsym mod3+Shift+semicolon move container to workspace $ws10
+bindsym mod3+Shift+a exec i3-msg "move container to workspace $($metaws)$ws1"
+bindsym mod3+Shift+s exec i3-msg "move container to workspace $($metaws)$ws2"
+bindsym mod3+Shift+d exec i3-msg "move container to workspace $($metaws)$ws3"
+bindsym mod3+Shift+f exec i3-msg "move container to workspace $($metaws)$ws4"
+bindsym mod3+Shift+g exec i3-msg "move container to workspace $($metaws)$ws5"
+bindsym mod3+Shift+h exec i3-msg "move container to workspace $($metaws)$ws6"
+bindsym mod3+Shift+j exec i3-msg "move container to workspace $($metaws)$ws7"
+bindsym mod3+Shift+k exec i3-msg "move container to workspace $($metaws)$ws8"
+bindsym mod3+Shift+l exec i3-msg "move container to workspace $($metaws)$ws9"
+bindsym mod3+Shift+semicolon exec i3-msg "move container to workspace $($metaws)$ws10"
 
 
 # reload the configuration file

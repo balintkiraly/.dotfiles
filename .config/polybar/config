@@ -26,7 +26,7 @@ modules-left = i3
 type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
-
+metaworkspace-path = /home/kiraly/.config/i3/metaws
 enable-click = true
 
 label-mode = %mode%
