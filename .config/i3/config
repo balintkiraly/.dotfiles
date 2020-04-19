@@ -29,7 +29,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym --release Mod1+l exec slock
 bindsym $mod+Shift+q kill
 
-bindsym $mod+d exec rofi -show run 
+bindsym $mod+d exec rofi -config $HOME/.config/rofi/theme.rasi -show run 
 
 # change focus
 bindsym $mod+j focus left
