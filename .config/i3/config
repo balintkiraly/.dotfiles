@@ -94,6 +94,8 @@ bindsym $mod+mod3+semicolon exec echo "0" > "$HOME/.config/i3/metaws"
 
 set $metaws cat "$HOME/.config/i3/metaws"
 
+exec i3-msg "workspace $($metaws)$ws1"
+
 # switch to workspace
 bindsym mod3+a exec i3-msg "workspace $($metaws)$ws1"
 bindsym mod3+s exec i3-msg "workspace $($metaws)$ws2"
