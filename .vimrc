@@ -17,6 +17,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'preservim/nerdtree'
 Plugin 'voldikss/vim-floaterm'
+Plugin 'pantharshit00/vim-prisma'
 
 call vundle#end()
 filetype plugin indent on
