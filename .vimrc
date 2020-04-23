@@ -18,6 +18,12 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'preservim/nerdtree'
 Plugin 'voldikss/vim-floaterm'
 Plugin 'pantharshit00/vim-prisma'
+Plugin 'mboughaba/i3config.vim'
+
+aug i3config_ft_detection
+    au!
+    au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config
+aug end
 
 call vundle#end()
 filetype plugin indent on
@@ -41,6 +47,7 @@ let g:lightline = {
 
 map <C-n> :NERDTreeToggle<CR>
 
+" Bascics
 syntax on
 colorscheme spacecamp
 
@@ -67,4 +74,25 @@ set ruler
  
 set undolevels=1000
 set backspace=indent,eol,start
+
+" Split 
+set splitbelow
+set splitright
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+nnoremap <silent> <C-Left> :vertical resize +5<CR>
+nnoremap <silent> <C-Right> :vertical resize -5<CR>
+nnoremap <silent> <C-Up> :resize +5<CR>
+nnoremap <silent> <C-Down> :resize -5<CR>
+
+" Tabs
+map <silent><Right> :tabnext<CR>
+map <silent><Left> :tabprevious<CR>
+map <silent><Up> :tabnew<CR>
+map <silent><Down> :tabclose<CR>
+
 
